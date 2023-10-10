@@ -1,0 +1,27 @@
+
+
+
+
+class Solution {
+    public boolean isPalindrome(int x) {
+        int temp = x;
+        int rev = 0; //reverse variable initialised by 0
+        while(x>0){
+            int digit = x%10;  //extract the digits
+            // Store the digit and reverse
+            rev=(rev*10)+digit;
+            x=x/10; //divide by 10
+        }
+        // check conditions
+        if(rev==temp){
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+
+    public static void main(String Arg[]){
+     //   System.out.println(isPalindrome(121));
+    }
+}
